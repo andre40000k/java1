@@ -1,6 +1,7 @@
 package com.company.classes;
 
-import com.company.classes.Adddress;
+
+import java.util.ArrayList;
 
 public class Shop
 {
@@ -11,22 +12,32 @@ public class Shop
     private double price;
     private double amount;
     private String shop;
-    private ArrayList<Adddress> adddress;
+    private ArrayList<Address> address;
 
 
-    @Override
-    public String toString() {
-        return super.toString();
-    }
 
-    public Shop(int code, String name, int quantity, double price, double amount, String shop, ArrayList<Adddress> adddress) {
+
+    public Shop(int code, String name, int quantity, double price, double amount, String shop, ArrayList<Address> address) {
         this.code = code;
         this.name = name;
         this.quantity = quantity;
         this.price = price;
         this.amount = amount;
         this.shop = shop;
-        this.adddress = adddress;
+        this.address = address;
+    }
+
+    @Override
+    public String toString() {
+        return "Shop{" +'\n' +
+                "  code=" + code +'\n' +
+                ", name=" + name + '\n' +
+                ", quantity=" + quantity +'\n' +
+                ", price=" + price +'\n' +
+                ", amount=" + amount +'\n' +
+                ", shop=" + shop + '\n' +
+                ", address=" + address +'\n' +
+                "}";
     }
 
     public String getName() { return name; }
@@ -49,9 +60,9 @@ public class Shop
 
     public void setShop(String shop) { this.shop = shop; }
 
-    public ArrayList<Adddress> getAdddress() { return adddress; }
+    public ArrayList<Address> getAddress() { return address; }
 
-    public void setAdddress(ArrayList<Adddress> adddress) { this.adddress = adddress; }
+    public void setAddress(ArrayList<Address> address) { this.address = address; }
 
     public int getCode() { return code; }
 
